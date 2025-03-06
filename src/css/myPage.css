@@ -1,8 +1,56 @@
+.my-page {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
 .back-hello {
-    background-color: rgb(114, 114, 114);
+  display: flex;
+  min-height: 1080px;
 }
 
 .back-block {
-    margin-top: 100px;
-    position: relative;
+  margin-top: 250px;
+  position: relative;
+}
+
+.home {
+  position: relative;
+}
+
+.back-block-text__title {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-left: 25px;
+}
+
+.back-block-tag {
+  color: var(--gray-text);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.back-block-text {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.back-block-text__text {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-left: 25px;
+}
+
+/* about */
+
+.home-block {
+  min-height: 1080px;
+}
+
+.home-block-about-text h2 {
+  font-size: 36px;
+  font-weight: 700;
 }

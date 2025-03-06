@@ -1,14 +1,19 @@
+import { useState, useEffect, createContext } from "react";
 
-import Hello from "./pageSection/hello";
+export const ThemeContext = createContext();
 
+const MyPage = ({ children }) => {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
-const MyPage = () => {
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    document.body.className = theme;
+  }, [theme]);
+
   return (
-    <div>
-
-      <Hello/>
-
-    </div>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div className={`my-page ${theme}`}>{children}</div>
+    </ThemeContext.Provider>
   );
 };
 

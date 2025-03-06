@@ -1,0 +1,15 @@
+.header {
+  position: fixed;
+  color: var(--text-color);
+  z-index: 10;
+  width: 100%;
+  background-color: #332f2f8e;
+  backdrop-filter: blur(2px);
+  padding: 15px;
+}
+
+.header-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
