@@ -1,3 +1,6 @@
 @import url(myPage.css);
 
 @import url(header.css);
+@import url(menu.css);
+
+@import url(../components/index.css);

@@ -1,7 +1,7 @@
 import face from "../../../img/face.png";
 import { Button } from "../../../components/button";
 
-export const About = () => {
+export const Program = () => {
   return (
     <div className="container home-block">
       <div className="home-block-about">

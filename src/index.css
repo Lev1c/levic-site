@@ -1,15 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 :root {
-  --bg-color: white;
-  --text-color: black;
+  --bg-color: rgb(250 250 250);
+  --text-color: #0f0f0f;
   --gray-text: #575757;
+  --borderRadius: 15px;
+  --text-color-black: #0f0f0f;
+  --text-color-white: rgb(250 250 250);
+  --backGround-header: #e6e5e5cc;
 }
 
 .dark {
   --bg-color: #0f0f0f;
-  --text-color: white;
+  --text-color: rgb(250 250 250);
   --gray-text: #b4b4b4;
+  --text-color-black: rgb(250 250 250);
+  --text-color-white: #0f0f0f;
+  --backGround-header: #1d1d1dcc;
 }
 
 body {
@@ -23,6 +30,6 @@ body {
 }
 
 .container {
-  width: 1320px;
+  width: 1120px;
   margin: auto;
 }

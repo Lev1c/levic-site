@@ -5,11 +5,10 @@
 
 .back-hello {
   display: flex;
-  min-height: 1080px;
+  align-items: center;
 }
 
 .back-block {
-  margin-top: 250px;
   position: relative;
 }
 
@@ -47,10 +46,35 @@
 /* about */
 
 .home-block {
+  display: flex;
   min-height: 1080px;
+  align-items: center;
 }
 
 .home-block-about-text h2 {
   font-size: 36px;
   font-weight: 700;
+}
+
+.home-block-about-text p {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 400;
+  color: var(--gray-text);
+}
+
+.home-block-about {
+  display: flex;
+  gap: 100px;
+}
+
+.home-block-about__img {
+  width: 100%;
+  max-width: 350px;
+}
+
+.home-block-about-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

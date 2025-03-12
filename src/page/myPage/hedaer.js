@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ThemeContext } from "../myPage/index";
 
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Globe } from "lucide-react";
 
 const Header = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -12,8 +12,14 @@ const Header = () => {
           <h2>Lev1c</h2>
         </div>
         <div className="hedaer-setting-block">
-          <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="header-setting__icon"
+          >
             {theme === "dark" ? <Sun /> : <Moon />}
+          </button>
+          <button className="header-setting__icon">
+            <Globe />
           </button>
         </div>
       </div>
