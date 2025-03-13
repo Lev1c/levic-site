@@ -29,7 +29,14 @@
   font-family: "Nunito", sans-serif;
   background: none;
   border: none;
-  font-size: 20px;
   color: var(--text-color);
   cursor: pointer;
+}
+
+.section-wrapper-false {
+  display: none;
+}
+
+.section-wrapper-true {
+  display: block;
 }
