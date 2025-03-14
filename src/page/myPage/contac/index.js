@@ -8,7 +8,7 @@ export const Contact = () => {
         <img src={face} alt="" className="home-block-about__img" />
         <div className="home-block-about-block">
           <div className="home-block-about-text">
-            <h2>Let's meet?</h2>
+            <h2>Contact</h2>
             <p>
               Lorem Ipsum is fish text often used in print and web design. Lorem
               Ipsum has been the standard "fish" for Latin texts since the early

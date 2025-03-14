@@ -17,46 +17,52 @@ const Home = () => {
   ];
 
   const [currentSection, setCurrentSection] = useState(0);
-
+  const [prevSection, setPrevSection] = useState(0);
+  const [delayedActiveIndex, setDelayedActiveIndex] = useState(0);
   const containerRef = useRef(null);
 
   const menuItems = ["Home", "About", "Portfolio", "Program", "Contacts"];
 
-  useEffect(() => {
-    const preventScroll = (e) => {
-      e.preventDefault();
-    };
+  const scrollToSection = (index) => {
+    setPrevSection(currentSection);
+    setCurrentSection(index);
+    // Задержка для анимации ухода текущего блока
+    setTimeout(() => {
+      setDelayedActiveIndex(index);
+    }, 500); // Время должно совпадать с длительностью transition в CSS
+  };
 
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("wheel", preventScroll, { passive: false });
-      container.addEventListener("touchmove", preventScroll, {
-        passive: false,
-      });
+  const getSectionClass = (index) => {
+    const isDelayedActive = index === delayedActiveIndex;
+    const isPrevActive = index === prevSection;
+    const isScrollingDown = currentSection > prevSection;
+
+    // Базовый класс видимости
+    let baseClass = `section-wrapper-true`;
+
+    if (isPrevActive && !isDelayedActive) {
+      // Предыдущий активный блок уходит
+      return `${baseClass} ${
+        isScrollingDown ? "exit-to-top" : "exit-to-bottom"
+      }`;
     }
 
-    return () => {
-      if (container) {
-        container.removeEventListener("wheel", preventScroll);
-        container.removeEventListener("touchmove", preventScroll);
-      }
-    };
-  }, []);
+    // Неактивные блоки
+    if (index < currentSection) {
+      return `${baseClass} scroll-up`;
+    } else if (index > currentSection) {
+      return `${baseClass} scroll-down`;
+    }
 
-  const scrollToSection = (index) => {
-    setCurrentSection(index);
+    return baseClass;
   };
+
   return (
-    <div className="">
+    <div className="home-container" ref={containerRef}>
       <Header />
-      <div className="home">
+      <div className="sections-container">
         {sections.map((SectionComponent, index) => (
-          <div
-            key={index}
-            className={`section-wrapper section-wrapper-${
-              currentSection === index
-            }`}
-          >
+          <div key={index} className={getSectionClass(index)}>
             {SectionComponent}
           </div>
         ))}
@@ -67,7 +73,7 @@ const Home = () => {
             <li key={index} className="menu-list_link">
               <button
                 className={`menu-list_link_button ${
-                  currentSection === index ? "active" : ""
+                  currentSection === index ? "menu-list_link_button-active" : ""
                 }`}
                 onClick={() => scrollToSection(index)}
               >
