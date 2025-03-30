@@ -2,7 +2,7 @@ import { useRef, useEffect, useState, useContext } from "react";
 import { ThemeContext } from "../index";
 import { Button } from "../../../components/button";
 
-const Hello = () => {
+const Hello = ({ scrollToSection }) => {
   const { theme } = useContext(ThemeContext);
 
   const color = theme === "dark" ? "black" : "white";
@@ -118,7 +118,7 @@ const Hello = () => {
           <p className="back-block-text__text">Front-end developer </p>
           <span className="back-block-tag">&lt;/p&gt;</span>
         </div>
-        <Button layout={"Contact me"} />
+        <Button layout={"Contact me"} onClick={() => scrollToSection(4)} />
       </div>
     </div>
   );

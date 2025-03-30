@@ -1,22 +1,57 @@
-import face from "../../../img/face.png";
+import image from "../../../img/image 9.png";
 import { Button } from "../../../components/button";
 
 export const Portfolio = () => {
   return (
     <div className="container home-block">
-      <div className="home-block-about">
-        <img src={face} alt="" className="home-block-about__img" />
-        <div className="home-block-about-block">
-          <div className="home-block-about-text">
-            <h2>Portfolio</h2>
-            <p>
-              Lorem Ipsum is fish text often used in print and web design. Lorem
-              Ipsum has been the standard "fish" for Latin texts since the early
-              16th century. At that time, a certain unnamed printer created a
-              large collection of font sizes and shapes.
-            </p>
+      <div className="home-block-port">
+        <div className="home-block-port-card">
+          <img src={image} alt="" className="block-port-card__img" />
+          <div className="block-port-card-setting">
+            <h3>Eclant</h3>
+            <div className="block-port-card-setting-dop">
+              <p>Landing-page</p>
+              <p>
+                срок реализации: <span>10 дней</span>
+              </p>
+            </div>
           </div>
-          <Button layout={"Next"} className={"button-default-about"} />
+        </div>
+        <div className="home-block-port-card">
+          <img src={image} alt="" className="block-port-card__img" />
+          <div className="block-port-card-setting">
+            <h3>Eclant</h3>
+            <div className="block-port-card-setting-dop">
+              <p>Landing-page</p>
+              <p>
+                срок реализации: <span>10 дней</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="home-block-port-card">
+          <img src={image} alt="" className="block-port-card__img" />
+          <div className="block-port-card-setting">
+            <h3>Eclant</h3>
+            <div className="block-port-card-setting-dop">
+              <p>Landing-page</p>
+              <p>
+                срок реализации: <span>10 дней</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="home-block-port-card">
+          <img src={image} alt="" className="block-port-card__img" />
+          <div className="block-port-card-setting">
+            <h3>Eclant</h3>
+            <div className="block-port-card-setting-dop">
+              <p>Landing-page</p>
+              <p>
+                срок реализации: <span>10 дней</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

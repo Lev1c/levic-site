@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext } from "../myPage/index";
 
-import { Sun, Moon, Globe } from "lucide-react";
+import { Sun, Moon, Globe, LogIn } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -21,6 +22,9 @@ const Header = () => {
           <button className="header-setting__icon">
             <Globe />
           </button>
+          <Link className="header-setting__icon" to={"/auth"}>
+            <LogIn />
+          </Link>
         </div>
       </div>
     </div>

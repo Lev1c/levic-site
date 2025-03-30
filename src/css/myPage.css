@@ -78,3 +78,148 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+/* portfolio */
+
+.home-block-port {
+  display: flex;
+  gap: 100px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.block-port-card__img {
+  width: 400px;
+}
+
+.block-port-card-setting-dop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-port-card-setting {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* setting page scroll */
+
+.sections-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.section-wrapper-false {
+  display: none;
+}
+
+.section-wrapper-true {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.active {
+  transform: translateY(0);
+  z-index: 2;
+}
+
+.enter-from-bottom {
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.enter-from-top {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.exit-to-top {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.exit-to-bottom {
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.scroll-up {
+  transform: translateY(-100%);
+  z-index: 0;
+}
+
+.scroll-down {
+  transform: translateY(100%);
+  z-index: 0;
+}
+
+/* contact */
+
+.home-block-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.home-block-contact__title h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.home-block-contact-link {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-block-contact__title p {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray-text);
+}
+
+.img-contact-link {
+  width: 24px;
+}
+
+.home-block-contact-link-setting {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.home-block-contact-link-setting a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.home-block-contact-link-setting a:hover {
+  color: var(--gray-text);
+  transition: 0.3s;
+}
+
+/* program */
+
+.program-block {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.program-block-title {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--text-color);
+}

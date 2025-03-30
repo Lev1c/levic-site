@@ -1,7 +1,7 @@
 import face from "../../../img/face.png";
 import { Button } from "../../../components/button";
 
-export const About = () => {
+export const About = ({ scrollToSection }) => {
   return (
     <div className="container home-block">
       <div className="home-block-about">
@@ -16,7 +16,11 @@ export const About = () => {
               large collection of font sizes and shapes.
             </p>
           </div>
-          <Button layout={"Next"} className={"button-default-about"} />
+          <Button
+            layout={"Next"}
+            className={"button-default-about"}
+            onClick={() => scrollToSection(2)}
+          />
         </div>
       </div>
     </div>

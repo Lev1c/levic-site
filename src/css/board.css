@@ -1,0 +1,27 @@
+.board-menu {
+  width: 250px;
+  background-color: rgb(141, 141, 141);
+  height: 100vh;
+  padding-left: 30px;
+  padding-top: 25px;
+}
+
+.board-menu-list {
+  margin-top: 40px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.board {
+  display: flex;
+}
+
+.board-header {
+  padding: 20px;
+  background-color: rgb(141, 141, 141);
+  display: flex;
+  justify-content: space-between;
+}
