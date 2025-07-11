@@ -1,29 +1,79 @@
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { News } from "./news/news";
+import { useState } from "react";
+import {
+  AlignHorizontalSpaceAround,
+  Banknote,
+  BriefcaseBusiness,
+  Calendar,
+  CircleHelp,
+  House,
+  LogOut,
+  Moon,
+  NotebookPen,
+  ScrollText,
+  Sun,
+} from "lucide-react";
+import { Home } from "./home/home";
 
 export const Board = () => {
+  const { theme, setTheme } = useState();
   return (
     <div className="board">
       <div className="board-menu">
-        <h2>Admin</h2>
+        <h2>Lev1c</h2>
         <ul className="board-menu-list">
-          <li>News</li>
-          <li>News</li>
-          <li>News</li>
-          <li>News</li>
+          <Link to={"/board/home"} className="board-list-li">
+            <House />
+            Главная
+          </Link>
+          <Link to={"/board/news"} className="board-list-li">
+            <ScrollText />
+            TG Канал
+          </Link>
+          <Link className="board-list-li">
+            <NotebookPen />
+            Заметки
+          </Link>
+          <Link className="board-list-li">
+            <Calendar /> Календарь
+          </Link>
+          <Link className="board-list-li">
+            <Banknote />
+            Финансы
+          </Link>
+          <Link className="board-list-li">
+            <BriefcaseBusiness />
+            Портфолио
+          </Link>
+          <Link className="board-list-li">
+            <CircleHelp />
+            Тренировка
+          </Link>
         </ul>
       </div>
-      <div style={{ width: "100%" }}>
+      <div className="board-block">
         <div className="board-header">
           <div>
-            <h4>Setting</h4>
+            <button className="header-setting__icon">
+              <AlignHorizontalSpaceAround />
+            </button>
           </div>
           <div>
-            <h2>Exit</h2>
+            <button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="header-setting__icon"
+            >
+              {theme === "dark" ? <Sun /> : <Moon />}
+            </button>
+            <button className="header-setting__icon">
+              <LogOut />
+            </button>
           </div>
         </div>
-        <div className="main-board">
+        <div className="container main-board">
           <Routes>
+            <Route path="/home" element={<Home />} />
             <Route path="/news" element={<News />} />
           </Routes>
         </div>
